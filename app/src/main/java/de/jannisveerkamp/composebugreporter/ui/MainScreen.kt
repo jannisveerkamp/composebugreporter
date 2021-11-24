@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
+import androidx.compose.material.TextField
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -73,6 +73,8 @@ fun MainScreen() {
 
 @Composable
 fun Content(text: String, buttonText: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    var enterTextVeryFastToMakeMeCrash by remember { mutableStateOf("") }
+
     Column(
         modifier = modifier.background(MaterialTheme.colors.background),
         verticalArrangement = Arrangement.Center,
@@ -82,6 +84,10 @@ fun Content(text: String, buttonText: String, onClick: () -> Unit, modifier: Mod
         Button(onClick = onClick) {
             Text(buttonText)
         }
+        TextField(
+            value = enterTextVeryFastToMakeMeCrash,
+            onValueChange = { enterTextVeryFastToMakeMeCrash = it }
+        )
     }
 }
 
