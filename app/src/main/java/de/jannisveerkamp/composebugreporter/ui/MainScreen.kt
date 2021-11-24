@@ -74,7 +74,6 @@ fun MainScreen() {
 @Composable
 fun Content(text: String, buttonText: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
     var enterTextVeryFastToMakeMeCrash by remember { mutableStateOf("") }
-
     Column(
         modifier = modifier.background(MaterialTheme.colors.background),
         verticalArrangement = Arrangement.Center,
@@ -87,6 +86,11 @@ fun Content(text: String, buttonText: String, onClick: () -> Unit, modifier: Mod
         TextField(
             value = enterTextVeryFastToMakeMeCrash,
             onValueChange = { enterTextVeryFastToMakeMeCrash = it }
+        )
+        TextField(
+            value = enterTextVeryFastToMakeMeCrash,
+            readOnly = true,
+            onValueChange = {  }
         )
     }
 }
