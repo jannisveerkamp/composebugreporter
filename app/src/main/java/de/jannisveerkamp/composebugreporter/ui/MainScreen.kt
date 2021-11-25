@@ -19,6 +19,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.dialog
 import androidx.navigation.compose.rememberNavController
+import com.google.accompanist.insets.navigationBarsWithImePadding
+import com.google.accompanist.insets.statusBarsPadding
 import dagger.hilt.android.lifecycle.HiltViewModel
 import de.jannisveerkamp.composebugreporter.ui.theme.ComposeBugreporterTheme
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -29,7 +31,13 @@ import javax.inject.Inject
 fun MainScreen() {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = "start") {
+    NavHost(
+        navController = navController,
+        startDestination = "start",
+        modifier = Modifier
+            .statusBarsPadding()
+            .navigationBarsWithImePadding()
+    ) {
         composable("start") { navBackStackEntry ->
             val viewModel = viewModel(
                 FirstScreenViewModel::class.java,
