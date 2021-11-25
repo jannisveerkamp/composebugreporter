@@ -1,10 +1,7 @@
 package de.jannisveerkamp.composebugreporter.ui
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -85,12 +82,14 @@ fun Content(text: String, buttonText: String, onClick: () -> Unit, modifier: Mod
         }
         TextField(
             value = enterTextVeryFastToMakeMeCrash,
-            onValueChange = { enterTextVeryFastToMakeMeCrash = it }
+            onValueChange = { enterTextVeryFastToMakeMeCrash = it },
+            modifier = Modifier.height(128.dp)
         )
         TextField(
             value = enterTextVeryFastToMakeMeCrash,
             readOnly = true,
-            onValueChange = {  }
+            onValueChange = {  },
+            modifier = Modifier.height(128.dp)
         )
     }
 }
