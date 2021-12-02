@@ -23,8 +23,8 @@ class MainActivity : ComponentActivity() {
                 ProvideWindowInsets {
                     // A surface container using the 'background' color from the theme
                     Surface(color = MaterialTheme.colors.background) {
-                        MainScreen()
-                        //KeyboardScrollScreen()
+                        //MainScreen()
+                        KeyboardScrollScreen()
                     }
                 }
             }
