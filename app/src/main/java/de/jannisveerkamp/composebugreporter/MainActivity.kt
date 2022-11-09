@@ -22,7 +22,7 @@ import de.jannisveerkamp.composebugreporter.ui.theme.ComposeBugreporterTheme
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val hugeText = "abcd-efgh-".repeat(50_000)
+    private val hugeText = "abcd-efgh-".repeat(30_000)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
