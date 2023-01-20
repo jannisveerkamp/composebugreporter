@@ -1,7 +1,7 @@
 buildscript {
     ext {
-        compose_version = "1.3.0"
-        accompanist_version = "0.27.0"
+        compose_version = "1.3.2"
+        accompanist_version = "0.28.0"
         // Use these versions to make the long text smoother:
         //compose_version = "1.2.1"
         //accompanist_version = "0.25.1"
@@ -11,9 +11,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.3.1"
+        classpath "com.android.tools.build:gradle:7.4.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20"
-        classpath "com.google.dagger:hilt-android-gradle-plugin:2.43.2"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.44.2"
     }
 }
 
